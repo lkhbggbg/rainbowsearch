@@ -1,0 +1,60 @@
+#main-section {
+  width: 600px;
+  max-width: 100vh;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main-section > * {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#title-section {
+  background: url('../images/rainbow.png');
+  height: 160px;
+  padding-top: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+#title-section h1 i:nth-child(6n+1) {
+  color: red;
+}
+
+#title-section h1 i:nth-child(6n+2) {
+  color: orange;
+}
+
+#title-section h1 i:nth-child(6n+3) {
+  color: yellow;
+}
+
+#title-section h1 i:nth-child(6n+4) {
+  color: green;
+}
+
+#title-section h1 i:nth-child(6n+5) {
+  color: blue;
+}
+
+#title-section h1 i:nth-child(6n+0) {
+  color: purple;
+}
+
+#rainbow-image {
+  max-width: 200px;
+}
+
+#query {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+#buttons :not(:first-child) {
+  margin-left: 1rem;
+}

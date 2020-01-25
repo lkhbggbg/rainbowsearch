@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Rainbow Search</title>
+  <meta name="description" content="A rainbow flavored search engine">
+  <meta name="author" content="Gus and Mark">
+
+  <link rel="stylesheet" href="./assets/styles/main.css">
+
+</head>
+
+<body>
+  <section id="main-section">
+    <div id="title-section">
+      <h1><i>R</i><i>a</i><i>i</i><i>n</i><i>b</i><i>o</i><i>w</i> <i>S</i><i>e</i><i>a</i><i>r</i><i>c</i><i>h</i></h1>
+      <!-- <img id="rainbow-image" src="./assets/images/rainbow.png"> -->
+    </div>
+
+    <form id="search-form">
+      <input id="query" type="search" name="q">
+      <div id="buttons">
+        <button id="submit-search" role="submit">Search</button>
+        <button id="im-feeling-lucky" role="submit">I'm Feeling Lucky</button>
+      </div>
+    </form>
+  </section>
+
+  <script>
+    const queryInput = document.getElementById('query');
+    const searchButton = document.getElementById('submit-search');
+    const imFeelingLuckyButtom = document.getElementById('im-feeling-lucky');
+
+    function getSearchValue() {
+      return queryInput.value;
+    }
+
+    searchButton.addEventListener('click', () => {
+      event.preventDefault()
+      const query = getSearchValue();
+      window.location = `https://duckduckgo.com/?q=${encodeURIComponent(query)}&format=json&pretty=1`;
+    });
+
+    imFeelingLuckyButtom.addEventListener('click', () => {
+      event.preventDefault();
+      alert('YOU ARE FEELING LUCKY TODAY!');
+    });
+  </script>
+</body>
+</html>
